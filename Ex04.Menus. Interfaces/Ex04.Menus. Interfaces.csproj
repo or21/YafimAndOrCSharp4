@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B92D37ED-884A-4C87-9605-3E092B11640C}</ProjectGuid>
+    <ProjectGuid>{8AE38ABB-01F7-4F7B-AFCA-3D0E47378DFB}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>B15_Ex04_Or_302521034_Yafim_308973882</RootNamespace>
-    <AssemblyName>B15 Ex04 Or 302521034 Yafim 308973882</AssemblyName>
+    <RootNamespace>Ex04.Menus.Interfaces</RootNamespace>
+    <AssemblyName>Ex04.Menus.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace B15_Ex04_Or_302521034_Yafim_308973882
+namespace Ex04.Menus.Interfaces
 {
     class Program
     {
-        //Nir
+        // Yafim
     }
 }
