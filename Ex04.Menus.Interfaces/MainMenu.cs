@@ -5,6 +5,8 @@ namespace Ex04.Menus.Interfaces
 {
     public class MainMenu
     {
+        private const string k_Exit = "Exit";
+        private const string k_Back = "Back";
         private List<MainMenuItem> m_MainMenuList;
         private string m_Name;
 
@@ -12,8 +14,9 @@ namespace Ex04.Menus.Interfaces
         {
             m_MainMenuList = new List<MainMenuItem>();
             m_Name = i_Name;
+
             MainMenuItem exitItem = new MainMenuItem();
-            exitItem.Name = "Exit";
+            exitItem.Name = k_Exit;
             exitItem.Item = new ExitOperation();
             m_MainMenuList.Add(exitItem);
         }
@@ -25,7 +28,7 @@ namespace Ex04.Menus.Interfaces
             newItem.Item = i_SubMenu;
 
             MainMenuItem backItem = new MainMenuItem();
-            backItem.Name = "Back";
+            backItem.Name = k_Back;
             backItem.Item = new BackOperation();
 
             MainMenu mainMenu = i_SubMenu as MainMenu;
