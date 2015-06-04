@@ -38,6 +38,7 @@
     <Compile Include="BackOperation.cs" />
     <Compile Include="ExitOperation.cs" />
     <Compile Include="IRunOperation.cs" />
+    <Compile Include="LevelUpOperation.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>

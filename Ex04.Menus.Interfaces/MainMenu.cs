@@ -17,7 +17,7 @@ namespace Ex04.Menus.Interfaces
 
             MainMenuItem exitItem = new MainMenuItem();
             exitItem.Name = k_Exit;
-            exitItem.Item = new ExitOperation();
+            exitItem.Item = new LevelUpOperation();
             m_MainMenuList.Add(exitItem);
         }
 
@@ -29,7 +29,7 @@ namespace Ex04.Menus.Interfaces
 
             MainMenuItem backItem = new MainMenuItem();
             backItem.Name = k_Back;
-            backItem.Item = new BackOperation();
+            backItem.Item = new LevelUpOperation();
 
             MainMenu mainMenu = i_SubMenu as MainMenu;
             if (mainMenu != null)
