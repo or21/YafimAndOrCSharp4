@@ -5,11 +5,12 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-    public class Print2 : IRunOperation
+    public class ShowTime : IRunOperation
     {
         public void RunOperation()
         {
-            Console.WriteLine("I'm printing 2");
+            Console.WriteLine(DateTime.Now.ToString("T"));
+            Console.WriteLine("\nPress 'enter' to continue");
             Console.ReadLine();
         }
     }

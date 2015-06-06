@@ -104,6 +104,10 @@ namespace Ex04.Menus.Interfaces
             {
                 isValid = o_Result >= 0 && o_Result < m_MainMenuList.Count;
             }
+            else
+            {
+                o_Result = -1;
+            }
 
             return isValid;
         }

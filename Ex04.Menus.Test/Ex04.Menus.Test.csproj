@@ -32,9 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Print1.cs" />
-    <Compile Include="Print2.cs" />
+    <Compile Include="CountWords.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ShowDate.cs" />
+    <Compile Include="ShowTime.cs" />
+    <Compile Include="ShowVersion.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
