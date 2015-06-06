@@ -9,7 +9,7 @@ namespace Ex04.Menus.Test
     {
         public void RunOperation()
         {
-            Console.WriteLine(DateTime.Now.ToString("T"));
+            Console.WriteLine("Current time is: {0}", DateTime.Now.ToString("T"));
             Console.WriteLine("\nPress 'enter' to continue");
             Console.ReadLine();
         }

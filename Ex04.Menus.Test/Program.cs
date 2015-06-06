@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using Ex04.Menus.Interfaces;
+﻿using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
