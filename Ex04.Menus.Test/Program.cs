@@ -50,8 +50,10 @@
 
             showDateTime.AddSubMenu("Show Time", showTimeOperation);
             showDateTime.AddSubMenu("Show Date", showDateOperation);
+
             info.AddSubMenu("Show Version", showVersionOperation);
             info.AddSubMenu("Count Words", countWordsOperation);
+
             myMenu.AddSubMenu(showDateTime.Name, showDateTime);
             myMenu.AddSubMenu(info.Name, info);
 
