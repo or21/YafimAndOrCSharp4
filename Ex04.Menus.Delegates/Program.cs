@@ -34,13 +34,12 @@ namespace Ex04.Menus.Delegates
             myMenu.AddSubMenu(info.Name, info);
 
             myMenu.Show();
-
         }
 
 
         /* The methods to do */
 
-        public static void ShowDate(MenuItem menuItem)
+        public static void ShowDate()
         {
             Console.WriteLine("Current date is: {0}", DateTime.Now.ToString("d"));
             Console.WriteLine("\nPress 'enter' to continue");
