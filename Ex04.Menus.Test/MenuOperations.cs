@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿//-----------------------------------------------------------------------
+// <copyright file="MenuOperations.cs" company="B15_Ex04">
+// Yafim Vodkov 308973882 Or Brand 302521034
+// </copyright>
+//----------------------------------------------------------------------
+using System;
 using Ex04.Menus.Delegates;
 
 namespace Ex04.Menus.Test
 {
+    /// <summary>
+    /// All possible operations.
+    /// </summary>
     public class MenuOperations
     {
+        /// <summary>
+        /// Counts the number of words in a string.
+        /// </summary>
+        /// <param name="i_MenuItem">Menu Item</param>
         public static void CountWords(MenuItem i_MenuItem)
         {
             Console.WriteLine("Please enter a sentence and then press 'enter':");
@@ -25,6 +35,11 @@ namespace Ex04.Menus.Test
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Counts the number of words in a string.
+        /// </summary>
+        /// <param name="i_InputFromUser">Menu Item</param>
+        /// <returns>The number of words</returns>
         private static int countWordsInString(string i_InputFromUser)
         {
             int numberOfSpaces = char.IsWhiteSpace(i_InputFromUser[i_InputFromUser.Length - 1]) ? 1 : 0;
@@ -54,6 +69,10 @@ namespace Ex04.Menus.Test
             return numberOfWords;
         }
 
+        /// <summary>
+        /// Show Date
+        /// </summary>
+        /// <param name="i_MenuItem">Menu Item</param>
         public static void ShowDate(MenuItem i_MenuItem)
         {
             Console.WriteLine("Current date is: {0}", DateTime.Now.ToString("d"));
@@ -61,6 +80,10 @@ namespace Ex04.Menus.Test
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Show Time
+        /// </summary>
+        /// <param name="i_MenuItem">Menu Item</param>
         public static void ShowTime(MenuItem i_MenuItem)
         {
             Console.WriteLine("Current time is: {0}", DateTime.Now.ToString("T"));
@@ -68,6 +91,10 @@ namespace Ex04.Menus.Test
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Show Version
+        /// </summary>
+        /// <param name="i_MenuItem">Menu Item</param>
         public static void ShowVersion(MenuItem i_MenuItem)
         {
             Console.WriteLine("Version: 15.2.4.0");

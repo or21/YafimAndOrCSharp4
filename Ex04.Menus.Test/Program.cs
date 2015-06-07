@@ -1,14 +1,27 @@
-﻿namespace Ex04.Menus.Test
+﻿//-----------------------------------------------------------------------
+// <copyright file="Program.cs" company="B15_Ex04">
+// Yafim Vodkov 308973882 Or Brand 302521034
+// </copyright>
+//----------------------------------------------------------------------
+namespace Ex04.Menus.Test
 {
+    /// <summary>
+    /// Program class.
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Runs the program
+        /// </summary>
         public static void Main()
         {
             runInterfacesMenu();
-
             runDelegatesMenu();
         }
 
+        /// <summary>
+        /// Runs delegate version.
+        /// </summary>
         private static void runDelegatesMenu()
         {
             Delegates.MainMenu myMenu = new Delegates.MainMenu("Welcome to Delegates implemetation");
@@ -37,6 +50,9 @@
             myMenu.Show();
         }
 
+        /// <summary>
+        /// Runs Interface version.
+        /// </summary>
         private static void runInterfacesMenu()
         {
             Interfaces.MainMenu myMenu = new Interfaces.MainMenu("Welcome to Interfaces implemetation");

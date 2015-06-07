@@ -1,15 +1,42 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="MainMenu.cs" company="B15_Ex04">
+// Yafim Vodkov 308973882 Or Brand 302521034
+// </copyright>
+//----------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 
 namespace Ex04.Menus.Interfaces
 {
+    /// <summary>
+    /// MainMenu class.
+    /// </summary>
     public class MainMenu
     {
+        /// <summary>
+        /// Exit message
+        /// </summary>
         private const string k_Exit = "Exit";
+
+        /// <summary>
+        /// Back message
+        /// </summary>
         private const string k_Back = "Back";
+
+        /// <summary>
+        /// Holds the main menu items.
+        /// </summary>
         private List<MainMenuItem> m_MainMenuList;
+
+        /// <summary>
+        /// Name of the menu.
+        /// </summary>
         private string m_Name;
 
+        /// <summary>
+        /// Initializes a new instance of the MainMenu class.
+        /// </summary>
+        /// <param name="i_Name">Name to set</param>
         public MainMenu(string i_Name)
         {
             m_MainMenuList = new List<MainMenuItem>();
@@ -21,6 +48,11 @@ namespace Ex04.Menus.Interfaces
             m_MainMenuList.Add(exitItem);
         }
 
+        /// <summary>
+        /// Add sub-menu to current main menu.
+        /// </summary>
+        /// <param name="i_Name">Name of the sub-menu</param>
+        /// <param name="i_SubMenu">The sub-menu to add</param>
         public void AddSubMenu(string i_Name, object i_SubMenu)
         {
             MainMenuItem newItem = new MainMenuItem();
@@ -40,6 +72,9 @@ namespace Ex04.Menus.Interfaces
             m_MainMenuList.Add(newItem);
         }
 
+        /// <summary>
+        /// Shows the current main menu level.
+        /// </summary>
         public void Show()
         {
             int operationChosen = 1;
@@ -83,6 +118,12 @@ namespace Ex04.Menus.Interfaces
             }
         }
 
+        /// <summary>
+        /// Validates the input.
+        /// </summary>
+        /// <param name="i_Input">Input to check</param>
+        /// <param name="o_Result">Parse result</param>
+        /// <returns>If valid input</returns>
         private bool checkInput(string i_Input, out int o_Result)
         {
             bool isValid = false;
@@ -99,28 +140,47 @@ namespace Ex04.Menus.Interfaces
             return isValid;
         }
 
+        /// <summary>
+        /// Gets or sets the name
+        /// </summary>
+        public string Name
+        {
+            get { return m_Name; }
+            set { m_Name = value; }
+        }
+
+        /// <summary>
+        /// Main menu item struct.
+        /// </summary>
         private struct MainMenuItem
         {
+            /// <summary>
+            /// The name of the menu item
+            /// </summary>
             private string m_Name;
+
+            /// <summary>
+            /// Main menu item.
+            /// </summary>
             private object m_Item;
 
+            /// <summary>
+            /// Gets or sets the 
+            /// </summary>
             public string Name
             {
                 get { return m_Name; }
                 set { m_Name = value; }
             }
 
+            /// <summary>
+            /// Gets or sets the Menu item.
+            /// </summary>
             public object Item
             {
                 get { return m_Item; }
                 set { m_Item = value; }
             }
-        }
-
-        public string Name
-        {
-            get { return m_Name; }
-            set { m_Name = value; }
         }
     }
 }
