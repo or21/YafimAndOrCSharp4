@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CountWords.cs" />
+    <Compile Include="MenuOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ShowDate.cs" />
     <Compile Include="ShowTime.cs" />

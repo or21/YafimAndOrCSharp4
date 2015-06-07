@@ -1,15 +1,48 @@
-﻿using Ex04.Menus;
-
-namespace Ex04.Menus.Test
+﻿namespace Ex04.Menus.Test
 {
     public class Program
     {
         public static void Main()
         {
+            runInterfacesMenu();
+
+            runDelegatesMenu();
+        }
+
+        private static void runDelegatesMenu()
+        {
+            Delegates.MainMenu myMenu = new Delegates.MainMenu("Welcome to Delegates implemetation");
+            Delegates.MainMenu showDateTime = new Delegates.MainMenu("Show Date/Time");
+            Delegates.MainMenu info = new Delegates.MainMenu("Info");
+
+            Delegates.MenuItem showDate = new Delegates.MenuItem("Show Date");
+            showDate.Clicked += MenuOperations.ShowDate;
+
+            Delegates.MenuItem showTime = new Delegates.MenuItem("Show Time");
+            showTime.Clicked += MenuOperations.ShowTime;
+
+            Delegates.MenuItem countWords = new Delegates.MenuItem("Count Words");
+            countWords.Clicked += MenuOperations.CountWords;
+
+            Delegates.MenuItem showVersion = new Delegates.MenuItem("Show Version");
+            showVersion.Clicked += MenuOperations.ShowVersion;
+
+            showDateTime.AddSubMenu(showDate.Name, showDate);
+            showDateTime.AddSubMenu(showTime.Name, showTime);
+            info.AddSubMenu(showVersion.Name, showVersion);
+            info.AddSubMenu(countWords.Name, countWords);
+            myMenu.AddSubMenu(showDateTime.Name, showDateTime);
+            myMenu.AddSubMenu(info.Name, info);
+
+            myMenu.Show();
+        }
+
+        private static void runInterfacesMenu()
+        {
             Interfaces.MainMenu myMenu = new Interfaces.MainMenu("Welcome to Interfaces implemetation");
             Interfaces.MainMenu showDateTime = new Interfaces.MainMenu("Show Date/Time");
             Interfaces.MainMenu info = new Interfaces.MainMenu("Info");
-            
+
             Interfaces.IRunOperation showTimeOperation = new ShowTime();
             Interfaces.IRunOperation showDateOperation = new ShowDate();
             Interfaces.IRunOperation showVersionOperation = new ShowVersion();
@@ -25,26 +58,6 @@ namespace Ex04.Menus.Test
             myMenu.AddSubMenu(info.Name, info);
 
             myMenu.Show();
-
-            Delegates.MainMenu myMenuDelegates = new Delegates.MainMenu("Welcome to Delegates implemetation");
-            Delegates.MainMenu showDateTimeDelegates = new Delegates.MainMenu("Show Date/Time");
-            Delegates.MainMenu infoDelegates = new Delegates.MainMenu("Info");
-
-            Delegates.IRunOperation showTimeOperationDelegates = new ShowTime();
-            Delegates.IRunOperation showDateOperationDelegates = new ShowDate();
-            Delegates.IRunOperation showVersionOperationDelegates = new ShowVersion();
-            Delegates.IRunOperation countWordsOperationDelegates = new CountWords();
-
-            showDateTimeDelegates.AddSubMenu("Show Time", showTimeOperationDelegates);
-            showDateTimeDelegates.AddSubMenu("Show Date", showDateOperationDelegates);
-
-            infoDelegates.AddSubMenu("Show Version", showVersionOperationDelegates);
-            infoDelegates.AddSubMenu("Count Words", countWordsOperationDelegates);
-
-            myMenuDelegates.AddSubMenu(showDateTimeDelegates.Name, showDateTimeDelegates);
-            myMenuDelegates.AddSubMenu(infoDelegates.Name, infoDelegates);
-
-            myMenuDelegates.Show();
         }
     }
 }
