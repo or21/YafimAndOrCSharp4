@@ -7,13 +7,15 @@ namespace Ex04.Menus.Delegates
         private string m_Name;
         private object m_Item;
 
+        public event Action<MenuItem> Clicked;
+
         public MenuItem(string i_Name, object i_Item)
         {
             this.Name = i_Name;
             this.Item = i_Item;
         }
 
-        public void ItemMenuClicked()
+        public void menuItem_Clicked()
         {
             MainMenu toCompareTo = Item as MainMenu;
 
@@ -26,8 +28,6 @@ namespace Ex04.Menus.Delegates
                 OnClicked();
             }
         }
-
-        public event Action<MenuItem> Clicked;
 
         /// <summary>
         /// Runs a delagate

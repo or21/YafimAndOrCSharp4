@@ -7,7 +7,7 @@ namespace Ex04.Menus.Interfaces
     {
         private const string k_Exit = "Exit";
         private const string k_Back = "Back";
-        private List<MainMenuItem> m_MainMenuList;
+        private readonly List<MainMenuItem> m_MainMenuList;
         private string m_Name;
 
         public MainMenu(string i_Name)

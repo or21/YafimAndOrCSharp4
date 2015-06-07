@@ -84,7 +84,7 @@ namespace Ex04.Menus.Delegates
                 bool isValidAnswer = checkInput(answer, out operationChosen);
                 if (isValidAnswer)
                 {
-                    m_MainMenuList[operationChosen].ItemMenuClicked();
+                    m_MainMenuList[operationChosen].menuItem_Clicked();
                 }
                 else
                 {
