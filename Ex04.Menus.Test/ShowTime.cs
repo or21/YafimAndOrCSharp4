@@ -10,7 +10,6 @@ namespace Ex04.Menus.Test
         public void RunOperation()
         {
             MenuOperations.ShowTime(null);
-            //
         }
     }
 }
