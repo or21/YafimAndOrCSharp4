@@ -7,7 +7,7 @@ namespace Ex04.Menus.Test
 {
     public class MenuOperations
     {
-        public static void CountWords(MenuItem menuItem)
+        public static void CountWords(MenuItem i_MenuItem)
         {
             Console.WriteLine("Please enter a sentence and then press 'enter':");
             string inputFromUser = Console.ReadLine();

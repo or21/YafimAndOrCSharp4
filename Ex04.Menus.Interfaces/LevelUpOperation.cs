@@ -8,6 +8,7 @@ namespace Ex04.Menus.Interfaces
     {
         public void RunOperation()
         {
+            // This will be the place for any message on 'Back' operation.
         }
     }
 }
