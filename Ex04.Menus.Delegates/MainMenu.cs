@@ -1,3 +1,8 @@
+//-----------------------------------------------------------------------
+// <copyright file="MainMenu.cs" company="B15_Ex04">
+// Yafim Vodkov 308973882 Or Brand 302521034
+// </copyright>
+//----------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 
@@ -95,7 +100,7 @@ namespace Ex04.Menus.Delegates
         }
 
         /// <summary>
-        /// Validiates the input.
+        /// Validates the input.
         /// </summary>
         /// <param name="i_Input">Input to check</param>
         /// <param name="o_Result">Parse result</param>
@@ -118,7 +123,7 @@ namespace Ex04.Menus.Delegates
         }
 
         /// <summary>
-        /// Gets of sets menu's name.
+        /// Gets or sets menu's name.
         /// </summary>
         public string Name
         {
