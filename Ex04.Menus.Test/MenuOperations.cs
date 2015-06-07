@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Ex04.Menus.Delegates;
 
-namespace Ex04.Menus.Delegates
+namespace Ex04.Menus.Test
 {
-    public class Program
+    public class MenuOperations
     {
         public static void Main()
         {
@@ -34,23 +35,17 @@ namespace Ex04.Menus.Delegates
             myMenu.AddSubMenu(info.Name, info);
 
             myMenu.Show();
+
         }
 
 
         /* The methods to do */
 
-        public static void ShowDate()
-        {
-            Console.WriteLine("Current date is: {0}", DateTime.Now.ToString("d"));
-            Console.WriteLine("\nPress 'enter' to continue");
-            Console.ReadLine();
-        }
-
-        public static void CountWords(MenuItem menuItem)
+        public static void ShowDate(MenuItem menuItem)
         {
             Console.WriteLine("Please enter a sentence and then press 'enter':");
             string inputFromUser = Console.ReadLine();
-            if (inputFromUser != "")
+            if (inputFromUser != string.Empty)
             {
                 int numberOfWords = countWordsInString(inputFromUser);
                 Console.WriteLine("The number of words in your input is: {0}", numberOfWords);
@@ -93,21 +88,25 @@ namespace Ex04.Menus.Delegates
             return numberOfWords;
         }
 
-        public static void ShowVersion(MenuItem menuItem)
+        public static void ShowDate(MenuItem i_MenuItem)
         {
-            Console.WriteLine("Version: 15.2.4.0");
+            Console.WriteLine("Current date is: {0}", DateTime.Now.ToString("d"));
             Console.WriteLine("\nPress 'enter' to continue");
             Console.ReadLine();
         }
 
-
-        public static void ShowTime(MenuItem menuItem)
+        public static void ShowTime(MenuItem i_MenuItem)
         {
             Console.WriteLine("Current time is: {0}", DateTime.Now.ToString("T"));
             Console.WriteLine("\nPress 'enter' to continue");
             Console.ReadLine();
         }
 
+        public static void ShowVersion(MenuItem i_MenuItem)
+        {
+            Console.WriteLine("Version: 15.2.4.0");
+            Console.WriteLine("\nPress 'enter' to continue");
+            Console.ReadLine();
+        }
     }
 }
-

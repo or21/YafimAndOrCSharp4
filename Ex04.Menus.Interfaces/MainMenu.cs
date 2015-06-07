@@ -40,19 +40,6 @@ namespace Ex04.Menus.Interfaces
             m_MainMenuList.Add(newItem);
         }
 
-        public void RemoveSubMenu(string i_Name)
-        {
-            foreach (MainMenuItem currItem in m_MainMenuList)
-            {
-                bool isItemToDelete = i_Name == currItem.Name;
-                if (isItemToDelete)
-                {
-                    m_MainMenuList.Remove(currItem);
-                    break;
-                }
-            }
-        }
-
         public void Show()
         {
             int operationChosen = 1;

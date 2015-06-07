@@ -101,7 +101,9 @@ namespace Ex04.Menus.Delegates
 
         public void ItemMenuClicked()
         {
-            if (Item is MainMenu)
+            MainMenu toCompareTo = Item as MainMenu;
+
+            if (toCompareTo != null)
             {
                 ((MainMenu) Item).Show();
             }

@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Ex04.Menus.Interfaces;
+using Ex04.Menus;
 
 namespace Ex04.Menus.Test
 {
-    public class ShowDate : IRunOperation
+    public class ShowDate : Interfaces.IRunOperation
     {
         public void RunOperation()
         {
-            Console.WriteLine("Current date is: {0}", DateTime.Now.ToString("d"));
-            Console.WriteLine("\nPress 'enter' to continue");
-            Console.ReadLine();
+            MenuOperations.ShowDate(null);
         }
     }
 }

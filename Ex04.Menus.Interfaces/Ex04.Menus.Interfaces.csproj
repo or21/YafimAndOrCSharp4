@@ -38,7 +38,6 @@
     <Compile Include="IRunOperation.cs" />
     <Compile Include="LevelUpOperation.cs" />
     <Compile Include="MainMenu.cs" />
-    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
