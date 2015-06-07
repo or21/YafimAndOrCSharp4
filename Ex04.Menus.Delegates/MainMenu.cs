@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Ex04.Menus.Delegates
@@ -86,6 +86,7 @@ namespace Ex04.Menus.Delegates
             set { m_Name = value; }
         }
     }
+
 
     public class MenuItem
     {
