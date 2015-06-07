@@ -15,16 +15,16 @@
             Delegates.MainMenu showDateTime = new Delegates.MainMenu("Show Date/Time");
             Delegates.MainMenu info = new Delegates.MainMenu("Info");
 
-            Delegates.MenuItem showDate = new Delegates.MenuItem("Show Date", null);
+            Delegates.MenuItem showDate = new Delegates.MenuItem("Show Date");
             showDate.Clicked += MenuOperations.ShowDate;
 
-            Delegates.MenuItem showTime = new Delegates.MenuItem("Show Time", null);
+            Delegates.MenuItem showTime = new Delegates.MenuItem("Show Time");
             showTime.Clicked += MenuOperations.ShowTime;
 
-            Delegates.MenuItem countWords = new Delegates.MenuItem("Count Words", null);
+            Delegates.MenuItem countWords = new Delegates.MenuItem("Count Words");
             countWords.Clicked += MenuOperations.CountWords;
 
-            Delegates.MenuItem showVersion = new Delegates.MenuItem("Show Version", null);
+            Delegates.MenuItem showVersion = new Delegates.MenuItem("Show Version");
             showVersion.Clicked += MenuOperations.ShowVersion;
 
             showDateTime.AddSubMenu(showDate.Name, showDate);
@@ -50,8 +50,10 @@
 
             showDateTime.AddSubMenu("Show Time", showTimeOperation);
             showDateTime.AddSubMenu("Show Date", showDateOperation);
+
             info.AddSubMenu("Show Version", showVersionOperation);
             info.AddSubMenu("Count Words", countWordsOperation);
+
             myMenu.AddSubMenu(showDateTime.Name, showDateTime);
             myMenu.AddSubMenu(info.Name, info);
 
