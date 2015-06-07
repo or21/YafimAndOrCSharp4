@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Ex04.Menus.Delegates
@@ -15,16 +15,15 @@ namespace Ex04.Menus.Delegates
             m_MainMenuList = new List<MenuItem>();
             m_Name = i_Name;
 
-            MenuItem exitItem = new MenuItem(k_Exit);
+            MenuItem exitItem = new MenuItem(k_Exit, null);
             m_MainMenuList.Add(exitItem);
         }
 
         public void AddSubMenu(string i_Name, object i_SubMenu)
         {
-            MenuItem newItem = new MenuItem(i_Name);
-            newItem.Item = i_SubMenu;
+            MenuItem newItem = new MenuItem(i_Name, i_SubMenu);
 
-            MenuItem backItem = new MenuItem(k_Back);
+            MenuItem backItem = new MenuItem(k_Back, null);
 
             MainMenu mainMenu = i_SubMenu as MainMenu;
             if (mainMenu != null)
@@ -94,9 +93,10 @@ namespace Ex04.Menus.Delegates
         private string m_Name;
         private object m_Item;
 
-        public MenuItem(string i_Name)
+        public MenuItem(string i_Name, object i_Item)
         {
             this.Name = i_Name;
+            this.Item = i_Item;
         }
 
         public void ItemMenuClicked()
@@ -105,7 +105,7 @@ namespace Ex04.Menus.Delegates
 
             if (toCompareTo != null)
             {
-                ((MainMenu) Item).Show();
+                ((MainMenu)Item).Show();
             }
             else
             {

@@ -7,41 +7,7 @@ namespace Ex04.Menus.Test
 {
     public class MenuOperations
     {
-        public static void Main()
-        {
-            MainMenu myMenu = new MainMenu("Welcome to interfaces implemetation");
-            MainMenu showDateTime = new MainMenu("Show Date/Time");
-            MainMenu info = new MainMenu("Info");
-
-            MenuItem showDate = new MenuItem("Show Date");
-            showDate.Clicked += ShowDate;
-
-            MenuItem showTime = new MenuItem("Show Time");
-            showTime.Clicked += ShowTime;
-
-            MenuItem countWords = new MenuItem("Count Words");
-            countWords.Clicked += CountWords;
-
-            MenuItem showVersion = new MenuItem("Show Version");
-            showVersion.Clicked += ShowVersion;
-
-            showDateTime.AddSubMenu(showDate.Name, showDate);
-            showDateTime.AddSubMenu(showTime.Name, showTime);
-
-            info.AddSubMenu(showVersion.Name, showVersion);
-            info.AddSubMenu(countWords.Name, countWords);
-
-            myMenu.AddSubMenu(showDateTime.Name, showDateTime);
-            myMenu.AddSubMenu(info.Name, info);
-
-            myMenu.Show();
-
-        }
-
-
-        /* The methods to do */
-
-        public static void ShowDate(MenuItem menuItem)
+        public static void CountWords(MenuItem menuItem)
         {
             Console.WriteLine("Please enter a sentence and then press 'enter':");
             string inputFromUser = Console.ReadLine();
