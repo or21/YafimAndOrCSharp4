@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Ex04.Menus.Delegates
 {
-    public class Program
+    public class LevelUpOperation : IRunOperation
     {
+        public void RunOperation()
+        {
+        }
     }
 }

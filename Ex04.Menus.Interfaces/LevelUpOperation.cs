@@ -8,7 +8,6 @@ namespace Ex04.Menus.Interfaces
     {
         public void RunOperation()
         {
-            //
         }
     }
 }

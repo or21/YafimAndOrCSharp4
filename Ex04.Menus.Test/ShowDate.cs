@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Ex04.Menus.Interfaces;
+using Ex04.Menus;
 
 namespace Ex04.Menus.Test
 {
-    public class ShowDate : IRunOperation
+    public class ShowDate : Interfaces.IRunOperation
     {
         public void RunOperation()
         {

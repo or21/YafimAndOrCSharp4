@@ -1,15 +1,15 @@
 ﻿using System;
-using Ex04.Menus.Interfaces;
+using Ex04.Menus;
 
 namespace Ex04.Menus.Test
 {
-    public class CountWords : IRunOperation
+    public class CountWords : Interfaces.IRunOperation
     {
         public void RunOperation()
         {
             Console.WriteLine("Please enter a sentence and then press 'enter':");
             string inputFromUser = Console.ReadLine();
-            if (inputFromUser != "")
+            if (inputFromUser != string.Empty)
             {
                 int numberOfWords = countWordsInString(inputFromUser);
                 Console.WriteLine("The number of words in your input is: {0}", numberOfWords);
@@ -25,7 +25,7 @@ namespace Ex04.Menus.Test
 
         private int countWordsInString(string i_InputFromUser)
         {
-            int numberOfSpaces = char.IsWhiteSpace(i_InputFromUser[i_InputFromUser.Length - 1])? 1 : 0;
+            int numberOfSpaces = char.IsWhiteSpace(i_InputFromUser[i_InputFromUser.Length - 1]) ? 1 : 0;
             int numberOfWords = char.IsWhiteSpace(i_InputFromUser[0]) ? -1 : 0;
             for (int i = 1; i < i_InputFromUser.Length; i++)
             {
