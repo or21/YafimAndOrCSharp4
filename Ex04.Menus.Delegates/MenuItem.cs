@@ -41,7 +41,7 @@ namespace Ex04.Menus.Delegates
         /// <summary>
         /// Checks what operation to to do.
         /// </summary>
-        public void ItemMenuClicked()
+        public void menuItem_Clicked()
         {
             MainMenu toCompareTo = Item as MainMenu;
 
